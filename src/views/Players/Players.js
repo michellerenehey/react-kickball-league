@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchPlayers } from '../../services/players';
+import { Link } from 'react-router-dom';
 import PlayerList from '../../components/Player/PlayerList';
 
 export default function Players() {
@@ -20,6 +21,7 @@ export default function Players() {
       {players.map((player) => (
         <PlayerList key={player.id} {...player} />
       ))}
+      <Link to={'/'}>Back Home</Link>
     </div>
   );
 }
