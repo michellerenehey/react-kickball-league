@@ -10,11 +10,9 @@ export default function Players() {
     const fetchData = async () => {
       const data = await fetchPlayers();
       setPlayers(data);
-      console.log(data);
     };
     fetchData();
   }, []);
-  console.log(players);
 
   return (
     <div>

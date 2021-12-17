@@ -1,13 +1,14 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TeamDetail({ name, players }) {
   return (
     <div>
-      <p>i am {name}</p>
+      <h2>{name}</h2>
       {players.map((player) => (
-        <p key={player.id}>{player.name}</p>
+        <p key={player.id}>
+          <Link to={`/players/${player.id}`}>{player.name}</Link>
+        </p>
       ))}
-      {/* <p>team players: {players}</p> */}
     </div>
   );
 }

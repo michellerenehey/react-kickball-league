@@ -8,6 +8,7 @@ export default function Team(props) {
   const id = props.match.params.id;
   const [team, setTeam] = useState([]);
   const [players, setPlayers] = useState([]);
+  // add loading state!
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,8 +19,6 @@ export default function Team(props) {
     };
     fetchData();
   }, [id]);
-  console.log(team);
-  console.log(players);
 
   return <TeamDetail name={team.name} players={players} />;
 }
