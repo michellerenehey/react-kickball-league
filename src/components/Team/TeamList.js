@@ -1,1 +1,9 @@
-// this will display a list of team links (which you can click)
+import { Link } from 'react-router-dom';
+
+export default function TeamList({ id, name }) {
+  return (
+    <div>
+      <Link to={`/teams/${id}`}>{name}</Link>
+    </div>
+  );
+}
