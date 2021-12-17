@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchPlayers } from '../../services/players';
+import PlayerList from '../../components/Player/PlayerList; 
 
 export default function Players() {
   const [players, setPlayers] = useState([]);
@@ -13,5 +14,10 @@ export default function Players() {
   }, []);
   console.log(players);
 
-  return <div>i am the Players component</div>;
+  return (
+  <div>
+    {players.map((player) => (
+      <PlayerList key={player.id} {...player} />
+    ))}
+  </div>);
 }
