@@ -6,8 +6,12 @@ export default function Team(props) {
   const [team, setTeam] = useState([]);
 
   useEffect(() => {
-    fetchTeamById(id).then(({ data }) => setTeam(data));
+    const fetchData = async () => {
+      const data = await fetchTeamById(id);
+      setTeam(data);
+    };
+    fetchData();
   }, [id]);
-
-  return <div>{team}</div>;
+  console.log(team);
+  return <div>{team.name}</div>;
 }
