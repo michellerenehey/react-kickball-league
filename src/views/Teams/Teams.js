@@ -19,6 +19,9 @@ export default function Teams() {
       {teams.map((team) => {
         return team.name;
       })}
+      {/* when this loops, have each link create a p tag that links to /teams/:id... and loads a
+      TeamDetail component. not sure how to implement Teams list (i dont think we will need that
+      particular component...?) */}
     </div>
   );
 }
