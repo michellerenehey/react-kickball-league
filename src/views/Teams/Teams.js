@@ -1,6 +1,5 @@
 import { fetchTeams } from '../../services/teams';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import TeamList from '../../components/Team/TeamList';
 
 export default function Teams() {
@@ -13,7 +12,6 @@ export default function Teams() {
     };
     fetchData();
   }, []);
-  console.log(teams);
 
   return (
     <div>
