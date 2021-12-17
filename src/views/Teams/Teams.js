@@ -21,7 +21,7 @@ export default function Teams() {
       })}
       {/* when this loops, have each link create a p tag that links to /teams/:id... and loads a
       TeamDetail component. not sure how to implement Teams list (i dont think we will need that
-      particular component...?) */}
+      particular component...?) or maybe the above map actually happens on the teamslist page?*/}
     </div>
   );
 }
