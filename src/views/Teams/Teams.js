@@ -1,5 +1,6 @@
 import { fetchTeams } from '../../services/teams';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Teams() {
   const [teams, setTeams] = useState([]);
@@ -14,14 +15,32 @@ export default function Teams() {
   console.log(teams);
 
   return (
-    <div>
-      <p>i am the Teams component</p>
-      {teams.map((team) => {
-        return team.name;
-      })}
-      {/* when this loops, have each link create a p tag that links to /teams/:id... and loads a
-      TeamDetail component. not sure how to implement Teams list (i dont think we will need that
-      particular component...?) or maybe the above map actually happens on the teamslist page?*/}
-    </div>
+    <ul>
+      {teams.map((team) => (
+        <li key={team.id}>
+          <Link key={team.id} to={`/teams/${team.id}`}>
+            {team.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+    // <div>
+    //   <p>i am the Teams component</p>
+    //   {teams.map((team) => {
+    //     return team.name;
+    //   })}
+    // </div>
   );
+}
+
+{
+  /* <ul className="book-list" aria-label="book list">
+      {books.map((book) => (
+        <li key={book.book_id}>
+          <Link key={book.book_id} to={`/books/${book.book_id}`}>
+            <Book book={book} />
+          </Link>
+        </li>
+      ))}
+    </ul> */
 }
