@@ -1,1 +1,9 @@
-// this will display a list of players
+import { Link } from 'react-router-dom';
+
+export default function PlayerList({ id, name }) {
+  return (
+    <div>
+      <Link to={`/players/${id}`}>{name}</Link>
+    </div>
+  );
+}
