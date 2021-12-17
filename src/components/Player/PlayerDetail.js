@@ -7,6 +7,7 @@ export default function PlayerDetail({ name, team_id, teams }) {
       <p>
         I play on the <Link to={`/teams/${team_id}`}>{teams.name}</Link>
       </p>
+      <Link to="/players">Back to PLAYERS</Link>
     </div>
   );
 }

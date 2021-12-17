@@ -15,7 +15,6 @@ export default function Player(props) {
     };
     fetchData();
   }, [id]);
-  console.log(player);
 
   if (loading) return <h3>...Loading</h3>;
   return <PlayerDetails {...player} />;

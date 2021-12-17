@@ -9,6 +9,7 @@ export default function TeamDetail({ name, players }) {
           <Link to={`/players/${player.id}`}>{player.name}</Link>
         </p>
       ))}
+      <Link to="/teams">Back to TEAMS</Link>
     </div>
   );
 }
