@@ -1,25 +1,37 @@
-# Alchemy React Base Template
+# Kickball Manager!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## App Flow:
 
-Use this template for all your "from scratch" deliverables. To start, simply run
+- We will enter on the Home page.
+- Links to Teams and Players.
 
-- `npm install`
-- `npm start`
+- Teams: lists all teams in league, each list item (team name) is a clickable link.
 
-## Available Scripts
+  - When you click the link, you see the details of the individual team,including the name, logo, and players (each player is clickable).
 
-In the project directory, you can run:
+- Players: lists all players in league, each is a clickable link.
+  - When you click the link, you see the details of the individual player, including their name, position, and what team they are on.
 
-### `npm start`
+## File Structure:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### View (Contanier) Components:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- home
+- teams: shows all the teams (TeamList): /teams
+- players: shows all the players (PlayerList): /players
 
-### `npm test`
+- team: shows an individual team's detail (name, logo, individual players): /teams/:id
+- player: shows an individual player's detail (name, position, individual team): /players/:id
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Presentational Components:
+
+- TeamList: list of linkable teams
+- individual TeamDetail: list of linkable players
+- PlayerList: list of linkable players
+- individual PlayerDetail: includes linkable team
+
+### Services:
+
+- client.js
+- players.js
+- teams.js
